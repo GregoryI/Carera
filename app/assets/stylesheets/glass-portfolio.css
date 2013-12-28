@@ -1,0 +1,196 @@
+/* Portfolio */
+
+.portfolio-grid {
+  list-style: none;
+  padding: 20px 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.portfolio-grid li {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 30px;
+}
+
+.portfolio-grid li > a,
+.portfolio-grid li > a img {
+  border: none;
+  outline: none;
+  display: block;
+  position: relative;
+}
+
+.portfolio-grid li > a img {
+  width: 100%;
+}
+
+/* Morph Effect (On Hover) */
+/*
+.portfolio-grid img {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.portfolio-grid img:hover {
+  border-radius: 50%;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+*/
+
+/* Tilt Effect (On Hover) */
+/*
+.portfolio-grid img  {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.portfolio-grid img:hover {
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+*/
+
+.portfolio-grid li.portfolio-item-expanded > a::after {
+  top: auto;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: #fff;
+  border-bottom-color: rgba(255,255,255,0.4);
+  border-width: 15px;
+  left: 50%;
+  margin: -20px 0 0 -15px;
+}
+
+.portfolio-item-expander {
+  position: absolute;
+  z-index: 200;
+  top: auto;
+  left: 0;
+  width: 100%;
+  margin-top: 10px;
+  padding-bottom: 50px;
+  text-align: left;
+  height: 0;
+  overflow: hidden;
+}
+
+.portfolio-item-expander-inner {
+  padding: 50px 30px 50px 30px;
+  height: 500px;
+  zoom: 1;
+}
+
+.portfolio-item-close {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.portfolio-item-close {
+  color: #888;
+}
+
+.portfolio-item-close:hover {
+  color: #333;
+}
+
+.portfolio-item-fullimg,
+.portfolio-item-details {
+  width: 50%;
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.portfolio-item-fullimg {
+  text-align: center;
+}
+
+.portfolio-item-fullimg img {
+  display: inline-block;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.portfolio-item-fullimg img:hover {
+  border-radius: 0%;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.portfolio-item-details h3 {
+  font-weight: 300;
+  font-size: 52px;
+  line-height: 52px;
+  padding: 40px 0 10px 30px;
+  margin-bottom: 10px;
+}
+
+.portfolio-item-details p {
+  font-weight: 400;
+  line-height: 22px;
+  padding-left: 30px;
+}
+
+.portfolio-item-details a {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.portfolio-item-loading {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #333;
+  box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ccc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  -webkit-animation: loader 0.5s infinite ease-in-out both;
+  -moz-animation: loader 0.5s infinite ease-in-out both;
+  animation: loader 0.5s infinite ease-in-out both;
+}
+
+@-webkit-keyframes loader {
+  0% { background: #ddd; }
+  33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+  66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
+
+@-moz-keyframes loader {
+  0% { background: #ddd; }
+  33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+  66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
+
+@keyframes loader {
+  0% { background: #ddd; }
+  33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
+  66% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ddd, -15px 30px 1px #ccc; }
+}
